@@ -1,12 +1,6 @@
   <?php
 
-//1. CONNECTION ( Tramite le config/connection.php)
-// 1.1 Creare config/connection.php 
-//1.2 allegare a questo foglio API il conneciton.php.
-//2. COMPORRE LA QUERY MY SQL
-//3. SALVARE I DATI IN VARIABILI.
-
-
+include("connection.php");
 
 $genereScelto="tutte";
 
