@@ -1,6 +1,26 @@
 
 let select= document.getElementById("genere");
 let dischi=document.getElementById("dischi");
+console.log("IL FILE JS FUNZIONA");
+
+
+
+
+
+function apriVideo(link, i){
+    let contenitore = document.getElementById("video"+i);
+
+    contenitore.innerHTML = `<iframe width="560" height="315"  border-radius: "15px" src="${link}" allowfullscreen> </iframe>`;
+   
+}
+
+
+
+
+
+
+
+
 
 function cambiaDisco(){
 
@@ -25,12 +45,17 @@ fetch("api.php?genere=" +  encodeURIComponent(genereScelto))
 
 
  for(let i=0; i< filtrato.length; i++){
+
+    console.log(filtrato[i].link);
+
     dischi.innerHTML += 
      
    ` <div class="card">
 
-        <img src="${filtrato[i].poster}" class="immagini"></img>
-
+  
+        <img src="${filtrato[i].poster}" class="immagini" onclick="apriVideo('${filtrato[i].collegamento}', ${i})"> 
+      <div id="video${i}"></div>
+   
         <div class="titoloCard">
             ${filtrato[i].titolo}
         </div>
@@ -54,4 +79,7 @@ select.addEventListener("change", function(){
     cambiaDisco();
 })
 
+
+
 cambiaDisco();
+

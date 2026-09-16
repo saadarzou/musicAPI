@@ -1,7 +1,7 @@
   <?php
 
 include("config/connection.php");
-var_dump($conn);
+
 
 $genereScelto="tutte";
 
