@@ -1,6 +1,6 @@
   <?php
 
-include("config/connection.php");
+include("../config/connection.php");
 
 
 $genereScelto="tutte";
@@ -41,3 +41,5 @@ echo json_encode($stessoGenere);
 
 
 ?>
+
+

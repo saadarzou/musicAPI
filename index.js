@@ -1,7 +1,7 @@
 
 let select= document.getElementById("genere");
 let dischi=document.getElementById("dischi");
-console.log("IL FILE JS FUNZIONA");
+
 
 
 
@@ -27,7 +27,7 @@ function cambiaDisco(){
 let genereScelto=select.value;
 let filtrato = [];
 
-fetch("api.php?genere=" +  encodeURIComponent(genereScelto))
+fetch("api/read.php?genere=" + encodeURIComponent(genereScelto))
 .then(response => response.json())
 
 .then(data => {
