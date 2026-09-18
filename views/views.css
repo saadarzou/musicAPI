@@ -1,6 +1,9 @@
 body {
     background-color: black;
 }
+.contenitore{
+    align-items: center;
+}
 
 .header {
     display: flex;
@@ -19,7 +22,7 @@ h2 {
 
 form {
     width: 500px;
-    margin: 30px 30px;
+    margin: 30px auto;
 }
 
 form div {
@@ -36,11 +39,11 @@ label {
 
 input,
 select {
-    width: 100%;
-    padding: 12px;
+     width: 100%;
+     padding: 12px;
     font-size: 18px;
     border-radius: 8px;
-    border: none;
+
 }
 
 button {
@@ -50,3 +53,4 @@ button {
     font-size: 18px;
     border-radius: 8px;
 }
+

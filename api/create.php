@@ -18,19 +18,6 @@ $query = "INSERT INTO dischi ( titolo, artista, genere, anno, poster, collegamen
 $risultato= mysqli_query($conn, $query);
 header("Content-Type: application/json");
 
-
-if($risultato){
-    echo json_encode([
-        "success"=>true,
-        "messaggio"=>"Canzone aggiunta correttu amente"
-    ]
-    );
-} else {
-     echo json_encode([
-        "success"=>false,
-        "messaggio"=>"Canzone non aggiunta correttamente"
-    ]
-    );
-}
+header("Location: ../index.html");
 
 ?>

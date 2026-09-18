@@ -14,6 +14,35 @@ function apriVideo(link, i){
    
 }
 
+function modificaDisco(id){
+ window.location.href = "views/update_views.php?id=" + id;
+}
+
+function eliminaDisco(id){
+    
+    console.log("ID da eliminare:", id);
+
+fetch("api/delete.php",{
+
+    method: "POST",
+    headers: {
+        "Content-Type": "application/x-www-form-urlencoded" 
+    },
+
+     body: "id=" + id
+
+})
+
+.then(response => response.text())
+
+.then(data=>{
+    cambiaDisco();
+});
+
+
+}
+
+
 
 
 
@@ -67,6 +96,14 @@ fetch("api/read.php?genere=" + encodeURIComponent(genereScelto))
         <div class="genereAnnoCard">
             ${filtrato[i].genere} - ${filtrato[i].anno}
         </div>
+
+        <button onclick="eliminaDisco(${filtrato[i].id})">
+         Elimina
+        </button>
+
+        <button onclick="modificaDisco(${filtrato[i].id})">
+            modifica
+        </button>
 
     </div>
    `
